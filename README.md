@@ -1,2 +1,2 @@
-# BioC5361_2019
-Code for the Computer Lab portion of BioC5361 Fall 2019
+# BioC5361 Fall 2019
+This repo contains the code for the Computer Lab portion of BioC5361 Fall 2019
