@@ -2,13 +2,13 @@
 
 R is a language you will want to get familiar with to improve your ability to understand, analyse, and visualize your data.
 
-To begin to get comforatble with R, we will begin by learning some basics using a package called swirl.
+To begin to get comfortable with R, we will begin by learning some basics using a package called swirl.
 
 Open RStudio and enter these commands in the console to get started.
 
 ## Install and load swirl
 ```
-install.packages("swirl)
+install.packages("swirl")
 ```
 With swirl installed in your package library, it's time to load it so we can use it.
 
