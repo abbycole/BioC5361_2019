@@ -20,9 +20,9 @@ Notice that the convention in R is to use "" around the package name with instal
 Follow the prompts in the console and select "1: R Programming: The basics of programming in R"
 
 ## Complete swirl practice
-To start with I reccomend you work through the following courses:
+To start with I reccomend you work through the following courses they will give you a nice introduction to R and should help you to feel more confident using R for basic analysis:
 
 1. Basic Building Blocks      
-2. Workspace and Files       
+2. Workspace and Files    
 3. Sequences of Numbers
 4. Vectors
