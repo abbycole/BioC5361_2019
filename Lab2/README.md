@@ -17,15 +17,16 @@ library(swirl)
 ```
 Notice that the convention in R is to use "" around the package name with install.packages, but to omit the "" when loading a package.
 
-Follow the prompts in the console and select "1: R Programming: The basics of programming in R"
+Follow the prompts in the console and select "1: R Programming: The basics of programming in R".
 
 ## Complete swirl practice 1. Basic Building Blocks
-To start with I reccomend you work through the first module titled "Basic Building Blocks". 
+To start with I reccomend you work through the first module titled "1. Basic Building Blocks". 
 
 
-If you have R on your own computer, then I recommend completing the other courses, particularly 2-4 intially as they will give you a nice introduction to R and should help you to feel more confident using R for basic analysis:
-
-1. Basic Building Blocks      
+## Extra practice
+If you have R on your own computer, then I recommend completing a least a few other modules, particularly 2-4 intially. These will give you a nice introduction to R and should help you to feel more confident using R for basic analysis:
+ 
+### Recomended Modules
 2. Workspace and Files    
 3. Sequences of Numbers
 4. Vectors
