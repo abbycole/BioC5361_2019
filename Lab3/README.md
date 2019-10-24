@@ -34,7 +34,8 @@ Save the readme within the same directory as your data file.
 
 The first step in using microbiome data is pre-processing to get the data into a format that is ready for statistical analysis.
 
-Create an R script from within R studio and save it in your source code directory (src).
+Create an R script from within R studio and save it in your source code directory (src). 
+Give your script a meaningful name like "clean_taxonomy.R".
 
 Begin your code with the folling script. 
 
@@ -117,7 +118,7 @@ One important first analysis step in microbiome analysis pipelines is to assess 
 
 The most simplistic version of alpha diveristy is total speices per sample. Lets calculate the number of speices in each sample for this data and store it in a new file.
 
-Create a new script called speices_counts.R and save it in 'src'.
+Create a new script called "count_species_per_sample.R" and save it in 'src'.
 
 ```
 # Load your processed taxonomy file at the start of this script and call it tax
@@ -147,15 +148,43 @@ write.table(tax_counts,
 # now calculate the quantiles for this and write this result to another file using write.csv
 
 quants <- quantile(taxa_counts$taxa_counts)
-write.csv(quants, file = "quants.txt")
+write.csv(quants, file = "../results/species_per_sample_summary.txt")
 
 ```
 
+## Step 4. Automate the workflow
+
+Now you have two scripts that each complete part of your analysis pipeline from raw data to some output.
+
+You can now create another script to link these tasks together.
+
+Make another R script and call it "run_everything.R"
+
+```
+# Add some information here so you know what the script is doing
+
+# Remember to set your working directory to src where your scripts live
 
 
+# use the function source to load and run the two script you wrote
+
+source("clean_taxonomy.R")
+source("count_species_per_sample.R")
+
+```
+
+## Check your work:
+When you think you have everything working correctly you can delete your intermedite files and restart R.
+
+Delete:
+* ../clean_data/taxonomy_processed.txt
+* ../results/speices_per_sample.txt
+* ../results/species_per_sample_summary.txt
 
 
+Run your run_everything file. 
 
+Was your processed data file created again?
+Were the same results files generated?
 
-
-
+If your answers to these quetions are both 'yes', then congratulations! You just automated your workflow.
