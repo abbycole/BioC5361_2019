@@ -51,7 +51,7 @@ This is a framework, you will need to edit the code to set your working director
 setwd("lab3_bioc5361/lib")
 
 # First read in your data
-tax_raw <- read.delim("../taxonomy_raw.txt", 
+tax_raw <- read.delim("../raw_data/taxonomy_raw.txt", 
                       sep = "\t",                 # file is tab seperated
                       row.names = "X.taxonomy")   # the first column should be rownames
 
