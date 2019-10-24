@@ -66,7 +66,7 @@ In the data the columns are samples and the rows are taxa, so remember we want t
 
 ```
 s <- colSums(tax_raw)
-s_sums <- sort(d)
+s_sums <- sort(s)
 
 mean(s_sums)
 quantile(s_sums)
