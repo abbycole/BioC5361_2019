@@ -62,6 +62,8 @@ Our data is in a very raw format. We want to do some very minimal processing bef
 The first step is to remove low depth samples. So we want to know how many reads were assigned to a taxonomy for each sample.
 In the data the columns are samples and the rows are taxa, so remember we want to know about samples.
 
+**Lab report question 1 references this code chunk.**
+
 ```
 s <- colSums(tax_raw)
 s_sums <- sort(d)
@@ -78,6 +80,7 @@ View(tax_col_sums)
 We don't want to keep samples that have a low number of overall reads, so we will drop them.
 To do this we will use the bracket notation in R [].
 
+**Lab report question 2 references this cut off value.**
 ```
 # Drop samples with low read counts
 # Notice that there is one blank with a high read count 
@@ -120,6 +123,7 @@ The most simplistic version of alpha diveristy is total speices per sample. Lets
 
 Create a new script called "count_species_per_sample.R" and save it in 'src'.
 
+
 ```
 # Load your processed taxonomy file at the start of this script and call it tax
 
@@ -145,12 +149,15 @@ write.table(tax_counts,
             row.names = T, 
             col.names = T)
 
-# now calculate the quantiles for this and write this result to another file using write.csv
+# now calculate the quantiles for this and write this result to another file using write.csv().
+# write.csv is another way to write data to a file, just like write.table().
 
 quants <- quantile(taxa_counts$taxa_counts)
 write.csv(quants, file = "../results/species_per_sample_summary.txt")
 
 ```
+
+**Lab report question 3 is asking about the results of running the code above.**
 
 ## Step 4. Automate the workflow
 
@@ -182,9 +189,11 @@ Delete:
 * ../results/species_per_sample_summary.txt
 
 
-Run your run_everything file. 
+Run your "run_everything.R" script from a fresh R environment. 
 
 Was your processed data file created again?
 Were the same results files generated?
 
 If your answers to these quetions are both 'yes', then congratulations! You just automated your workflow.
+
+**Lab report question 4 is refers to the automation script.**
