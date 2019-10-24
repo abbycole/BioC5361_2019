@@ -13,7 +13,7 @@ Your file structure should be set up as follows:
 |   |--raw_data
 |   |--clean_data
 |   |--results
-|   |--src 
+|   |--lib 
 ```
 
 ## Step 1: Data Acquisition 
@@ -34,7 +34,7 @@ Save the readme within the same directory as your data file.
 
 The first step in using microbiome data is pre-processing to get the data into a format that is ready for statistical analysis.
 
-Create an R script from within R studio and save it in your source code directory (src). 
+Create an R script from within R studio and save it in your source code directory (lib). 
 Give your script a meaningful name like "clean_taxonomy.R".
 
 Begin your code with the folling script. 
@@ -47,8 +47,8 @@ This is a framework, you will need to edit the code to set your working director
 
 #### Remember your code should be well commented ####
 
-# First set your working directory to the src directory in your project
-setwd("lab3_bioc5361/src")
+# First set your working directory to the lib directory in your project
+setwd("lab3_bioc5361/lib")
 
 # First read in your data
 tax_raw <- read.delim("../taxonomy_raw.txt", 
@@ -121,7 +121,7 @@ One important first analysis step in microbiome analysis pipelines is to assess 
 
 The most simplistic version of alpha diveristy is total speices per sample. Lets calculate the number of speices in each sample for this data and store it in a new file.
 
-Create a new script called "count_species_per_sample.R" and save it in 'src'.
+Create a new script called "count_species_per_sample.R" and save it in 'lib'.
 
 
 ```
@@ -170,7 +170,7 @@ Make another R script and call it "run_everything.R"
 ```
 # Add some information here so you know what the script is doing
 
-# Remember to set your working directory to src where your scripts live
+# Remember to set your working directory to lib where your scripts live
 
 
 # use the function source to load and run the two script you wrote
