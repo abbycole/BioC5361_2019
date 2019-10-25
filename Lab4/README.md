@@ -100,4 +100,20 @@ subject$BMI
 
 ```
 ## Step 4: Find the subset of individuals who have at least 6 samples
+It's common to need to know how many samples you have in a treatment or person.
+So, lets work out how many people have at least 6 microbiome samples in our study.
+
+```R
+# Take a look at the variable fecal.status in the original mapping file by printing it to the console
+# This variable is 1 if the subject has a microbiome sample for that study day
+# It's 0 if a subject didn't provide a sample for that study day
+# It's NA if we have no information about a sample for that study day
+map$fecal.status
+
+# Count the number of samples in the study using sum 
+sum(map$fecal.status) 
+
+# Call ?sum and work out how to edit the previous command to obtain the total number of samples
+
+```
 
