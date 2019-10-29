@@ -23,12 +23,13 @@ rownames(map)
 # Take a look at your column names
 colnames(map) # Lab report Q1 refers to this line of code
 
+
 # Change the name of you first column so that it's more human readable
 # This will improve your code readibility in the future
 
 # There are multiple ways to change the name of a column in R
-# Some are better (safer) than others
-# Lets try a dangerous way first
+# Some are better (easier to read) than others
+# Lets try a hard to read way first 
 
 # You can change the name using base R like this
 colnames(map)[colnames(map) == "X.SampleID"] <- "NEWNAME"
@@ -39,10 +40,14 @@ colnames(map)
 # Another way to change the column name is to use a package like tidyverse
 
 # Install the tidyverse
-install.packages("tidyverse")
+install.packages("tidyverse") # remember you only need to do this once
 
 # Load the tidyverse
-library(tidyverse)
+library(tidyverse) # pull the package into your environment
+
+
+# Take a look at all your data with a new tidyverse function
+glimpse() # Think critically, see the <fct> next to Subject in this output, what type of variable is "Subject"? 
 
 # Now we can change the name with tidyverse
 # This uses a 'pipe' that's specific to the tidyverse '%>%'
@@ -113,7 +118,22 @@ map$fecal.status
 # Count the number of samples in the study using sum 
 sum(map$fecal.status) 
 
-# Call ?sum and work out how to edit the previous command to obtain the total number of samples
+# Call ?sum and work out how to edit the previous command to obtain the total number of samples 
+?sum
 
+# Now lets call sum but this time within a person using select, grouping, summarize, and filter in dplyr
+
+grouped <- map %>% 
+  select(Subject, fecal.status) %>% 
+  group_by(Subject) %>% 
+  summarize(sum = sum(fecal.status, na.rm = T)) %>% 
+  filter(sum >= 6) %>%
+  droplevels()
+
+# Take a look at your new dataframe
+glimpse(grouped)
+View(grouped)
+
+# use the $ operator to write the names of the samples that we should keep to the console
 ```
 
