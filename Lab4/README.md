@@ -2,7 +2,7 @@
 
 One of the things that can be difficult about data science is that sometimes you have data in two different dataframes and you need to merge or join those data together so that you can draw conclusions about your samples or sequencing information.
 
-Today's lab will introduce methods to tidy up data naming, create new variables, aggregate, reorder, transpose, filter, select, and alter text programatically.
+Today's lab will introduce methods to tidy up data naming, create new variables, aggregate, reorder, filter, and select programatically.
 
 For today's exercise you will be using real data corresponding to the taxonomy table that you used in the last lab session. This is the mapping file that identifies all of the samples in the study. By the end of today's lab you will create a smaller mapping file that identifies each of the subjects in the study.
 
