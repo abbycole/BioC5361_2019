@@ -14,7 +14,7 @@ Load the metadata file into R using what you have already learned. A good short 
 
 Take a look at your metadata file to make sure it was read in correctly using the following commands:
 
-**Lab report Q1 and 2 refer to this code chunk**
+**Lab report Q1 and Q2 refer to this code chunk**
 ```R
 # Take a look at your rownames
 # Remember, these should just be a numeric row number, not any sample identifier
@@ -88,6 +88,7 @@ subject_map <- map %>%                  # start with the long table
 
 ## Step 3: Create a new variable "BMI"
 
+**Lab report Q3 refers to this code chunk**
 
 ```R
 # Another common task you need to complete frequenlty is to calculate new variables
@@ -108,6 +109,7 @@ subject$BMI
 It's common to need to know how many samples you have in a treatment or person.
 So, lets work out how many people have at least 6 microbiome samples in our study.
 
+**Lab report Q4 - Q6 refer to this code chunk**
 ```R
 # Take a look at the variable fecal.status in the original mapping file by printing it to the console
 # This variable is 1 if the subject has a microbiome sample for that study day
