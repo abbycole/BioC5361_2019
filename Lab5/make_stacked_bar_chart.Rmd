@@ -1,0 +1,156 @@
+# Make stacked bar plot in Rmd
+
+---
+title: "Make Stacked Bar Plot"
+author: "Your Name"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_document
+---
+
+
+```{r, setup}
+# it's good practice to load your packages at the start of your document
+library(knitr)
+library(ggplot2)
+library(tidyverse)
+
+# setwd - this has different syntax in an R markdown
+
+# alter this line to upated it with the path to your directory
+opts_knit$set(root.dir = "~/Documents/Projects/Teaching/BioC5361/")
+
+
+```
+
+```{r, prepdata, include=F}
+
+# read in the data (set stringsAsFactors = T, will set text characters as factors, will help with plotting)
+plot <- read.delim("Data/data_for_plotting.txt", stringsAsFactors = T) 
+
+# lets check the order of the genus factor
+levels(plot$Genus)
+
+# Oh, those are alphabetical, but remember we want them in order of abundance in the dataset
+# load the ordering factor we made before
+# we have to edit the import steps a bit using read.table() becuase this is not really a table
+tax_ord_factor <- read.table(file = "Data/tax_order.txt", sep = "\t", col.names = "Genus")
+
+# reorder the factor for plotting
+plot$Genus <-factor(plot$Genus, levels = tax_ord_factor$Genus)
+
+# Great! Now check that we have reordered
+levels(plot$Genus)
+
+# Finally, we changed the person identifier to a number
+# but we don't want R to treat it as a continuous variable
+# so lets force that to be a factor too
+plot$Subject <- as.factor(plot$Subject)
+
+```
+
+
+```{r, make_plot, fig.width=7, fig.height=4}
+# Now we can really make our plot
+# plot as area plot
+micro_plot <- ggplot(data = plot, aes(x=Subject, y = value, fill=Genus)) +
+  geom_bar(stat = "identity") +
+  theme_classic() +
+  NULL
+  
+# call the plot to see it in the Rmd viewer
+micro_plot
+```
+
+
+```{r, adjust,fig.width=7, fig.height=4}
+# that's cool, but the colors could be better
+# lets customize them
+# first work out how many colors we need
+# get right number of colors for plotting
+no_cols <- length(unique(plot$Genus))
+
+# make up some colors, you can change these if you like
+colors_micro <- c("lightgrey", "#afd35a", "#ec9bfa", "#3c3e00", "#aaa4e1", "#a717d9","#f4e909",
+                  "#ffaa00", "#ff0000", "#69ef7b", "#d20000", "#ff5084", "#b04fbc", "#5bc07f",
+                  "#e242a8", "#ffaae8", "#df97ac", "#0024ff", "#71619c", "#3d7600", "#1f72d4")
+
+# add the new colors to the existing plot with scale_fill_manual
+micro_plot <- micro_plot + scale_fill_manual(values = colors_micro)
+
+micro_plot
+
+# that looks pretty good, but now we might want to change some of the fonts etc.
+```
+
+
+```{r, relativeabundance, fig.width=7, fig.height=4}
+
+# again start with the plot you have already made, and add more features using theme()
+micro_plot <- micro_plot + theme(axis.text.x = element_text(size = 12),
+        axis.text.y = element_text(size = 12),
+        axis.title = element_text(size = 12),
+        legend.position = "bottom",
+        legend.text = element_text(size = 9),
+        legend.title = element_blank()) +
+  guides(fill = guide_legend(reverse = TRUE,
+                             keywidth = 0.5,
+                             keyheight = 0.5,
+                             ncol = 4)) +
+  ylab("Relative Abundance") 
+
+micro_plot
+
+# as you can see it's very flexible!
+
+
+# save your plot
+ggsave("results/stackedbarchart.pdf", micro_plot, width = 7.5, height = 4, dpi = 300)
+```
+
+
+```{r, yourplot, fig.width=7, fig.height=4}
+
+# Now it's your turn to make a plot using the same starting table
+
+# plot the abundance of bacteroides alone v. BMI as a scatter plot
+
+# first subset your plotting dataframe to contain only values for bacteroides
+# hint: use filter from tidyverse
+# complete this code to filter for only rows where Genus is Bacteroides
+
+bact <- plot %>% filter()
+
+# bacteroides is commonly associated with a western diet as is higher fasting blood glucose
+
+# lets look at the scatter plot of these two continuous variables
+# fill in the framework below with the correct variable names
+scatter <- ggplot(bact, aes(x = , y = )) + 
+  geom_point() +
+  geom_smooth(method = "lm")
+
+
+scatter
+
+
+# test to see if there is a correlation using cor.test
+cor.test()
+
+
+# add a trend line to your plot using geom_smooth(method = "lm")
+
+
+# Adjust your plot by playing with features in ggplot to tweak the way it looks
+# Consider changing the background and defult settings using theme_classic()
+# alter the point size using a size varaible inside of geom_point()
+# change the color of points using the color variable insdie of geom_point()
+# see if you can work out how to add the pvalue to your plot using annotate()
+
+
+
+# export your final figure as a pdf 
+
+
+```
+
+
+
