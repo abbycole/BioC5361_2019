@@ -3,6 +3,12 @@
 ### Background
 In this lab exercise we will begin to learn how to use the command line to access files stored on MSI.
 
+### Get your login info for MSI
+
+  * You should already have MSI access though your x500, log in using your normal username and password, but then change into the course directory with this command:
+  * If you can't log in to MSI, click on this link: https://www.msi.umn.edu/user-agreement. After you agree to the user agreement you will get your login information. 
+  
+
 ### Connect to MSI
 - Connect to MSI using SSH. On a Mac this means opening the Terminal app and using SSH. On Windows this means using PuTTY to connect.
 
@@ -29,11 +35,8 @@ https://the.earth.li/~sgtatham/putty/latest/x86/putty-0.67-installer.msi
  
  * Enter your password
   * You should now be connected.
-
-### Get your login info for MSI
-
-  * You should already have MSI access though your x500, log in using your normal username and password, but then change into the course directory with this command:
-  * If you can't log in to MSI, click on this link: https://www.msi.umn.edu/user-agreement. After you agree to the user agreement you will get your login information. 
+  
+  - Once you have connected to MSI navigate to your home directory for this class by running the following command:
   
   ```bash
   cd /home/bioc5361/<your username>
