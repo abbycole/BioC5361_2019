@@ -5,7 +5,7 @@ In this lab exercise we will begin to learn how to use the command line to acces
 
 ### Get your login info for MSI
 
-  * You should already have MSI access though your x500, log in using your normal username and password, but then change into the course directory with this command:
+  * You should already have MSI access though your x500, log in using your normal username and password.
 
 
 ### Connect to MSI
@@ -41,16 +41,18 @@ https://the.earth.li/~sgtatham/putty/latest/x86/putty-0.67-installer.msi
   cd /home/bioc5361/<your username>
   ```
 
-- When you first log in, you will be on the "login" node. You are not allowed to run computations on this node. Instead, you can get to an interactive node for running computations with this command:
+- When you first log in, you will be on the "login" node. You are not allowed to run computations on this node. 
+ - We will not run any major computational tasks today. However it's useful to practice using the interactive node. You can read more about the interactive queue here: https://www.msi.umn.edu/content/interactive-queue-use-isub
+ - You can get to an interactive node for running computations with this command:
 
-- We will not run any major computational tasks today. However it's useful to practice using the interactive node. You can read more about the interactive queue here: https://www.msi.umn.edu/content/interactive-queue-use-isub
- 
  ```bash
  isub -n nodes=1:ppn=4 -m 8GB -w 02:00:00
  ```
 
+
 - Note: if you ever receive an error saying that you have exceeded the available memory, you can increase to 16GB.
- You can also request 8 hours instead of two as follows:
+ You can also request 8 hours instead of two as follows. You do not need to run this command right now. This is a just incase command that you may find helpful in the future.
+ 
  ```bash
  isub -n nodes=1:ppn=4 -m 16GB -w 08:00:00
  ```
@@ -96,7 +98,9 @@ Think critically about what you are doing to answer the questions posed by the c
 # count the number of lines in the mg1655_genome.fna file using wc
 # consult the manual for wc agian to work out how to run this command
 
-# use the command grep to output any lines that contain a ">" symbol
+# Use the command grep to output any lines that contain a ">" symbol.
+# Remember without quotes, the > will have different functionality. 
+# Always put quotes around ">" if you are using it with grep.
 grep ">" mg1655_genome.fna
 
 # now get a glimpse of the first few lines of the fastq file in the shared directory using head
