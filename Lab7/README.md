@@ -88,7 +88,12 @@ man wc
 
 # quit the manual using q
 q
+```
+The next commands refer to Q2 in this week's lab report. I've intentionally left this series of commands incomplete.
 
+Think critically about what you are doing to answer the questions posed by the comments.
+
+```bash
 # count the number of lines in the mg1655_genome.fna file using wc
 # consult the manual for wc agian to work out how to run this command
 
@@ -96,21 +101,27 @@ q
 grep ">" mg1655_genome.fna
 
 # now get a glimpse of the first few lines of the fastq file in the shared directory using head
-head 
+head
 
 # count the number of lines in this file and divide by 4 to determine how many reads are in this fastq
+```
 
+Finally, this set of comments refers to Q3 on this week's lab report.
+Again, you will need to supply the code that completes this section.
+
+```bash
 # You will notice that there is also a fasta version of this same file in the shared directory
 # Remember, fastas are more "human readible" versions of genomic information
-# In a fasta, each read comes afte a line that starts with ">"
+# In a fasta, each read comes after a line that starts with ">"
 
 # see if you can come up with a command that uses grep and wc 
-# and takes advantage of the terminal pipe | to output the number of reads directly to the console
-# remember the pipe | functions just like the %>% opperator from tidyverse
-
-
+# and takes advantage of the terminal pipe "|" to output the number of reads directly to the console
+# remember the pipe "|" functions just like the "%>%" opperator from tidyverse
 
 ```
+
+
+
 
 
 
