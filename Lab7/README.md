@@ -76,6 +76,32 @@ ls
 
 # change into the “shared” directory
 cd ../shared
+
+# use the head command to look at the first few lines of a fna file in this directory
+head mg1655_genome.fna
+
+# now call tail to see what the end of this file looks like
+tail mg1655_genome.fna
+
+# use man to bring up the manual for the wc command
+man wc
+
+# quit the manual using q
+q
+
+# count the number of lines in the mg1655_genome.fna file using wc
+# consult the manual for wc agian to work out how to run this command
+
+# use the command grep to output any lines that contain a ">" symbol
+grep ">" mg1655_genome.fna
+
+# now get a glimpse of the first few lines of the fastq file in the shared directory using head
+head 
+
+# count the number of lines in this file and divide by 4 to determine how many reads are in this fastq
+
 ```
+
+
 
 
