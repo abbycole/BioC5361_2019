@@ -100,6 +100,16 @@ head
 
 # count the number of lines in this file and divide by 4 to determine how many reads are in this fastq
 
+# You will notice that there is also a fasta version of this same file in the shared directory
+# Remember, fastas are more "human readible" versions of genomic information
+# In a fasta, each read comes afte a line that starts with ">"
+
+# see if you can come up with a command that uses grep and wc 
+# and takes advantage of the terminal pipe | to output the number of reads directly to the console
+# remember the pipe | functions just like the %>% opperator from tidyverse
+
+
+
 ```
 
 
