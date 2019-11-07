@@ -14,9 +14,9 @@ In this lab exercise we will begin to learn how to use the command line to acces
 **Windows users**
   * Follow these instructions to configure puTTY to connect: https://www.msi.umn.edu/support/faq/how-do-i-configure-putty-connect-msi-unix-systems.
   * Alternatively, follow these instructions:
+    * The lab computers alreay have putty installed
     * Install "Putty" by downloading this file and running the installer:
 https://the.earth.li/~sgtatham/putty/latest/x86/putty-0.67-installer.msi
-    * The lab computers alreay have putty installed
     * Open the Putty application
     * Under the "Hostname" field, enter `login.msi.umn.edu`
     * Under "Port", enter `22`
