@@ -11,6 +11,8 @@ In this lab exercise we will begin to learn how to use the command line to acces
 ### Connect to MSI
 - Connect to MSI using SSH. On a Mac this means opening the Terminal app and using SSH. On Windows this means using PuTTY to connect.
 
+Note: If you are accessing MSI from home you will need to connect to the VPN before you can connect. [Information about using VPN at the U.](https://it.umn.edu/vpn-downloads-guides)
+
 **Windows users**
   * Follow these instructions to configure puTTY to connect: https://www.msi.umn.edu/support/faq/how-do-i-configure-putty-connect-msi-unix-systems.
   * Alternatively, follow these instructions:
