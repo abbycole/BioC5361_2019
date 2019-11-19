@@ -32,9 +32,9 @@ head GCA_000026345.1_ASM2634v1_genomic.fna.gz
 
 What genome have you downloaded?
 
-Using your internet browswer take a look at the ftp site. [What other information about this organism is avaliable to you at the ftp site?](ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/026/345/GCA_000026345.1_ASM2634v1)
+Using your internet browswer take a look at the ftp site. [What other information about this organism is avaliable to you at the ftp site?](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/026/345/GCA_000026345.1_ASM2634v1)
 
-Can you find another genome and sucessfully download it as well? Start at the refseq ftp site and see if you can work out how to find the correct file to download for your favorite bug of interest. [Refseq/bacteria.](ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/)
+Can you find another genome and sucessfully download it as well? Start at the refseq ftp site and see if you can work out how to find the correct file to download for your favorite bug of interest. [Refseq/bacteria.](https://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/)
 
 Compare the new genome you've downloaded to the genome I directed you to using wc. 
 
