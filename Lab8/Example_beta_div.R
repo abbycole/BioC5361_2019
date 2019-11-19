@@ -13,8 +13,10 @@
 library(vegan)
 library(ape)
 
+# add a line to set your directory to where you have the taxa table stored
+
 # load your data
-tax <- read.delim("Desktop/taxatable.txt", row.names = 1)
+tax <- read.delim("taxatable.txt", row.names = 1)
 
 # drop low read samples
 # here I've automated to drop the lowest quantile, but this is conservative
