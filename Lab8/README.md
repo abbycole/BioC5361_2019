@@ -34,39 +34,12 @@ What genome have you downloaded?
 
 Using your internet browswer take a look at the ftp site. [What other information about this organism is avaliable to you at the ftp site?](ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/026/345/GCA_000026345.1_ASM2634v1)
 
-## Search for a 16S primer sequence in your genome using blast from the command line
+Can you find another genome and sucessfully download it as well?
 
-First get on to an isub node, the default settings are fine for this.
+Compare the two genomes you've downloaded using wc. 
 
-```
-isub
-```
+How do their file sizes differ?
 
-Load the blast module on MSI. 
-
-```
-module load ncbi_blast+
-```
-Make a file that will become your query sequence. And open the empty file
-
-```
-touch myquery.fna
-nano myquery.fna
-```
-Paste a query sequence into the file with the following format, but replace the seuqence information line with the sequence you want to search for. 
-
-```
-> Your query name
-SEQUENCEINFORMATION
-
-```
-
-Exit the nano session using ctrl + x then follow the prompts.
-
-
-```
-blastn -db nt -query myquery.fna -out results.out
-```
 
 
 
